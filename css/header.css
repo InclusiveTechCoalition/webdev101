@@ -1,0 +1,19 @@
+.main-nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo {
+  color: #DDD;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

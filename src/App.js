@@ -25,8 +25,6 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2 onClick={this.handleClick}>Welcome to React</h2>
         </div>
         <CourseList courses={this.state.courses}></CourseList>
       </div>

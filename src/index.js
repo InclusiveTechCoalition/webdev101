@@ -1,21 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 
 import App from './App';
 import Header from './Header';
 
  const Root = () => (
-
-    <BrowserRouter>
+    <Router>
       <div>
-        <Match exactly pattern="/" component={ App } />
-        <Match pattern="/store/:storeId" component={ App } />
-        <Miss component={ App } />
+        <Route path="/*" component={ Header } />
+        <Route exact path="/" component={ App } />
+        <Route path="/lesson/:id" component={ App } />
       </div>
-    </BrowserRouter>
-
+    </Router>
 )
 
 render(
