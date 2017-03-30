@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
 class CourseList extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { courses: this.props.courses }
-  // }
   render() {
 
     return (
