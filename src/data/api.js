@@ -21,6 +21,7 @@ function makeRequest (method, url) {
 
     if ("withCredentials" in xhr) {
       xhr.open(method, url, true);
+      // eslint-disable-next-line
     } else if (typeof XDomainRequest != "undefined") {
       xhr = new XDomainRequest();
       xhr.open(method, url);

@@ -6,7 +6,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 import './index.css';
 
-import App from './App';
+// import App from './App';
 import Header from './Header';
 import Course from './components/Course';
 import HomePage from './components/HomePage';
