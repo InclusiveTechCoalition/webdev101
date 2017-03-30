@@ -19,7 +19,7 @@ class Header extends React.Component {
 }
 
 Header.contextTypes = {
-  router: React.PropTypes.object
+  history: React.PropTypes.object.isRequired
 }
 
 export default Header;
