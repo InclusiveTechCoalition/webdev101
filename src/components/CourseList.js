@@ -10,7 +10,7 @@ class CourseList extends Component {
 
     return (
       <div>
-        <h1>i am list</h1>
+        <h1>Available Courses</h1>
         {this.props.courses.map(function(course, idx) {
           return (
             <div className="course-panel" key={idx}>{course.title}</div>
