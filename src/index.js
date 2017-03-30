@@ -1,9 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
+import { BrowserRouter, Match, Miss } from 'react-router';
 import './index.css';
 
-ReactDOM.render(
-  <App />,
+import App from './App';
+import Header from './Header';
+
+ const Root = () => (
+
+    <BrowserRouter>
+      <div>
+        <Match exactly pattern="/" component={ App } />
+        <Match pattern="/store/:storeId" component={ App } />
+        <Miss component={ App } />
+      </div>
+    </BrowserRouter>
+
+)
+
+render(
+  <Root />,
   document.getElementById('root')
 );
+
+render(
+  <Header />,
+  document.getElementById('header')
+)
