@@ -11,7 +11,7 @@ h2 {
 }
 
 .content {
-  margin: 0 20vw;
+  margin: 0 10vw;
   padding: 10vh 10vw;
   display: flex;
   flex-direction: column;
@@ -70,4 +70,19 @@ pre, code {
   color: #222;
   line-height: 16px;
   padding: 2px;
+}
+
+.direction-buttons {
+  background-color: #222;
+  text-align: center;
+}
+
+.arrow {
+  color: #98af43;
+  font-size: 36px;
+  text-decoration: none;
+  padding: 0 35px;
+}
+.arrow:first-child {
+  margin-right: 25vw;
 }

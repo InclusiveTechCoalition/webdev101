@@ -14,6 +14,7 @@ class Course extends React.Component {
     }
     this.renderLessonSection = this.renderLessonSection.bind(this);
     this.nextLesson = this.nextLesson.bind(this);
+    this.prevLesson = this.prevLesson.bind(this);
   }
   
   componentWillMount() {
@@ -37,6 +38,16 @@ class Course extends React.Component {
     })
   }
 
+  prevLesson(e) {
+    e.preventDefault();
+    const currentLesson = { ...this.state.currentLesson };
+    let prevIndex = (currentLesson.order - 1);
+    prevIndex = prevIndex < 0 ? this.state.lessons.length - 1 : prevIndex
+    this.setState({
+      currentLesson: this.state.lessons[prevIndex]
+    })
+  }
+
   renderLessonSection() {
     if (this.state.currentLesson) {
       return (
@@ -52,7 +63,10 @@ class Course extends React.Component {
 
         {this.renderLessonSection()}
 
-        <a href="#" onClick={this.nextLesson}>Move on</a>
+        <div className="direction-buttons">
+          <a href="#" className='arrow' onClick={this.prevLesson}>Prev &larr;</a>
+          <a href="#" className='arrow' onClick={this.nextLesson}>&rarr; Next</a>
+        </div>
 
       </div>
     )
