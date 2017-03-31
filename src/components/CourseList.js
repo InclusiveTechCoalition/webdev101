@@ -10,7 +10,7 @@ class CourseList extends Component {
         {this.props.courses.map(function(course, idx) {
           return (
             <div className="course-panel" key={idx}>
-              <Link to={`course/${course.id}`}>{course.title}
+              <Link to={`webdev101/course/${course.id}`}>{course.title}
               </Link>
             </div>
           )

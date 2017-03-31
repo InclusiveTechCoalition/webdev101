@@ -12,7 +12,7 @@ class Header extends React.Component {
   render() {
     return(
       <header className="main-nav">
-        <Link to={{pathname: '/'}} className="nav-logo clickable">WWCode Web Dev</Link>
+        <Link to={{pathname: '/webdev101'}} className="nav-logo clickable">WWCode Web Dev</Link>
       </header>
     )
   }

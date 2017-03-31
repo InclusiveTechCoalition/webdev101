@@ -22,8 +22,8 @@ const Root = () => (
     <div>
       <Route path="/*" component={ Header } />
       <Switch>
-        <Route exact path="/" component={ HomePage } />
-        <Route path="/course/:id" component={ Course } />
+        <Route exact path="/webdev101/" component={ HomePage } />
+        <Route path="/webdev101/course/:id" component={ Course } />
       </Switch>
     </div>
   </Router>
