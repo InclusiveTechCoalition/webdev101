@@ -1,0 +1,32 @@
+.information {
+  max-width: 45vw;
+  border: 1px solid #222;
+  margin-top: 20px;
+  margin-left: 2.5vw;
+  /*display: inline-block;*/
+  /*float: left;*/
+}
+
+.information h2 {
+  background-color: #222;
+  color: #4398AF;
+  margin-top: 0;
+  line-height: 1.8em;
+}
+
+.course-list {
+  width: 45vw;
+  float: right;
+  text-align: center;
+  margin-right: 2.5vw;
+  border: 1px solid #222;
+  padding-bottom: 25px;
+}
+
+.course-list h2 {
+  background-color: #4398AF;
+  color: #222;
+  margin-top: 0;
+  line-height: 1.8em;
+  border-bottom: 1px solid #222;
+}

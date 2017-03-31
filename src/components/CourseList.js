@@ -5,8 +5,8 @@ class CourseList extends Component {
   render() {
 
     return (
-      <div>
-        <h1>Available Courses</h1>
+      <div className='course-list'>
+        <h2>Available Courses</h2>
         {this.props.courses.map(function(course, idx) {
           return (
             <div className="course-panel" key={idx}>
