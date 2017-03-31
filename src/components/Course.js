@@ -1,6 +1,8 @@
 import React from 'react';
 import { getCourse } from '../data/api';
 
+import '../../css/course.css'
+
 class Course extends React.Component {
   
   constructor(props) {
@@ -45,8 +47,8 @@ class Course extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.state.course ? this.state.course.title : 'Welcome!'}</h1>
+      <div className='course'>
+        <h1 className='title'>{this.state.course ? this.state.course.title : 'Welcome!'}</h1>
 
         {this.renderLessonSection()}
 

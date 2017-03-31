@@ -1,0 +1,73 @@
+.course {
+  display:flex;
+  flex-direction: column;
+  background-color: #CCC;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
+
+.content {
+  margin: 0 20vw;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+}
+
+.content img {
+  align-self: center;
+  max-width: 40vw;
+  height: auto;
+  box-shadow: 1px 1px 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  color: #222;
+  background-color: #4398AF;
+  text-align: center;
+  margin: 0;
+  height: 80px;
+  line-height: 80px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p.closing {
+  color: #4398AF;
+  font-weight: bold;
+  margin-top: 25px;
+  text-align: center;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 1.5vw 0 1.5vw 2.5vw;
+}
+
+strong {
+  color: #222;
+  background-color: #4398AF;
+  padding: 1.5px;
+  border-radius: 4px;
+}
+
+pre, code {
+  overflow-x: scroll;
+  background-color: #98af43;
+  color: #222;
+  line-height: 16px;
+  padding: 2px;
+}
