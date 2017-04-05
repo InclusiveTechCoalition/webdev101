@@ -9,18 +9,18 @@ import Header from './Header';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      courses: []
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     courses: []
+  //   }
+  // }
 
-  componentWillMount (){
-    getCourses().then(response => {
-      this.setState({ courses: response.courses })
-    })
-  }
+  // componentWillMount (){
+  //   getCourses().then(response => {
+  //     this.setState({ courses: response.courses })
+  //   })
+  // }
 
   render() {
     return (

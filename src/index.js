@@ -1,12 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Switch, Route } from 'react-router';
-import { BrowserRouter as Router } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
+import { Route, Router, browserHistory } from 'react-router';
 
 import './index.css';
 
-// import App from './App';
+import App from './App';
 import Header from './Header';
 import Course from './components/Course';
 import HomePage from './components/HomePage';
@@ -14,17 +12,16 @@ import HomePage from './components/HomePage';
 
 // <Route path="/lesson/:id" component={ App } />
 // <Route exact path="/" component={ App } />
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 
 
 const Root = () => (
-  <Router history={history}>
+  <Router history={browserHistory}>
     <div>
-      <Route path="/*" component={ Header } />
-      <Switch>
-        <Route exact path="/webdev101/" component={ HomePage } />
-        <Route exact path="/webdev101/course/:id" component={ Course } />
-      </Switch>
+      <Route component={ App }>
+        <Route exact path='/webdev101/' component={ HomePage } />
+        <Route path='/webdev101/course/:id' component={ Course } />
+      </Route>
     </div>
   </Router>
 )
@@ -34,7 +31,7 @@ render(
   document.getElementById('root')
 );
 
-render(
-  <Header />,
-  document.getElementById('header')
-)
+// render(
+//   <Header />,
+//   document.getElementById('header')
+// )

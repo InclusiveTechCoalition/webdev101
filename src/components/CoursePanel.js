@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 class CoursePanel extends Component {
   render() {
@@ -7,10 +7,10 @@ class CoursePanel extends Component {
       <div className="course-panel">
         <Link to={`/webdev101/course/${this.props.course.id}`}>{this.props.course.title}
         </Link>
-        <ul class='lesson-list'>
+        <ul className='lesson-list'>
           {this.props.course.lessons.map((lesson) => {
             return(
-              <li className='lesson-list-item'>{lesson.title}</li>
+              <li className='lesson-list-item' key={lesson.id}>{lesson.title}</li>
             )
           })}
         </ul>

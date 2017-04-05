@@ -18,7 +18,7 @@ class Course extends React.Component {
   }
   
   componentWillMount() {
-    getCourse(this.props.match.params.id)
+    getCourse(this.props.params.id)
       .then(response => {
         console.log(response)
         this.setState({
