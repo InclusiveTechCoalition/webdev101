@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 import { getCourses } from '../data/api'
 
@@ -22,10 +21,7 @@ class HomePage extends Component {
       this.setState({ courses: response.courses })
     })
   }
-
-        // <div className="App-header">
-        //   <img src={logo} className="App-logo" alt="logo" />
-        // </div>
+  
   render() {
     return (
       <div className="App">

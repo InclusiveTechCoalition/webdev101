@@ -1,11 +1,11 @@
 .information {
-  max-width: 45vw;
+  width: 45vw;
   border: 1px solid #222;
   margin-top: 20px;
   margin-left: 2.5vw;
-  /*display: inline-block;*/
-  /*float: left;*/
+  float: left;
 }
+
 
 .information h2 {
   background-color: #222;
@@ -17,7 +17,6 @@
 .course-list {
   width: 45vw;
   float: right;
-  text-align: center;
   margin-right: 2.5vw;
   border: 1px solid #222;
   padding-bottom: 25px;
@@ -29,4 +28,30 @@
   margin-top: 0;
   line-height: 1.8em;
   border-bottom: 1px solid #222;
+}
+
+.course-panel {
+  padding: 0 2vw;
+  text-align: left;
+}
+
+.lesson-list {
+  list-style: none;
+}
+
+.lesson-list-item {
+  list-style: none;
+  padding: 0 2vw;
+  font-size: 0.8em;
+}
+
+
+@media only screen and (max-width: 758px) {
+  .information, .course-list {
+    width: 75vw;
+    clear: both;
+    margin: 20px auto;
+    margin-right: auto;
+    float: none;
+  }
 }
