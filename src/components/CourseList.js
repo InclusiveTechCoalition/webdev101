@@ -4,7 +4,6 @@ import CoursePanel from './CoursePanel';
 
 class CourseList extends Component {
   render() {
-
     return (
       <div className='course-list information'>
         <h2>Available Courses</h2>
