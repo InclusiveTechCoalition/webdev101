@@ -12,13 +12,22 @@ class CoursePanel extends Component {
     this.unfoldedCourseClass = this.unfoldedCourseClass.bind(this);
   }
 
-  setUnfoldedCourse(courseTitle) {
-    this.setState({unfoldedCourse: courseTitle})
+  setUnfoldedCourse(id) {
+    if (this.state.unfoldedCourse === id){
+      this.setState({unfoldedCourse: null});
+    } else {
+      this.setState({unfoldedCourse: id});    
+    }
   }
 
-  unfoldedCourseClass(courseTitle) {
-    return this.state.unfoldedCourse === courseTitle ? 'unfolded-course' : '';
+  unfoldedCourseClass(id) {
+    return this.state.unfoldedCourse === id ? 'unfolded-course' : '';
   }
+
+  unfoldedCourseArrow(id) {
+    return this.state.unfoldedCourse === id ? 'rotated-90' : 'rotated-0';
+  }
+
   render() {
     const course = this.props.course;
 
@@ -26,16 +35,17 @@ class CoursePanel extends Component {
       return `/webdev101/course/${course.id}/l/${lesson.route}`;
     }
 
-
     return (
-      <div className={`course-panel ${this.unfoldedCourseClass(course.title)}`}>
+      <div className={`course-panel ${this.unfoldedCourseClass(course.id)}`}>
         <Link to={`/webdev101/course/${course.id}/l/${course.lessons[0].route}`}
               className='course-title'>{course.title}
         </Link>
-        <span className="fa-stack clickable" onClick={() => this.setUnfoldedCourse(course.title)}>
-          <i className="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i>
-          <i className="fa fa-chevron-right fa-stack-1x" aria-hidden="true"></i>
-        </span>
+
+
+        <i className={`fa fa-chevron-circle-right clickable show-lessons-arrow ${this.unfoldedCourseArrow(course.id)}`} onClick={() => this.setUnfoldedCourse(course.id)}>
+        </i>
+
+
         <ul className='lesson-list'>
           {course.lessons.map((lesson, idx) => {
             return(
