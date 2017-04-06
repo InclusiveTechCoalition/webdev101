@@ -35,8 +35,40 @@
   text-align: left;
 }
 
+.fa-stack {
+  height: 1.2em;
+  width: 1em;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.fa-stack:hover .fa-stack-1x {
+  transform: rotate(90deg) translatey(2px);
+}
+
+
+.fa-stack-1x {
+  font-size: 0.6em;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  left: 0.4em;
+  top: 0.4em;
+  transition: transform 0.15s;
+}
+
+.fa-stack-2x {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.unfolded-course .lesson-list {
+  display: block;
+}
+
 .lesson-list {
   list-style: none;
+  display: none;
 }
 
 .lesson-list-item {
