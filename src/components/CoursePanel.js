@@ -5,14 +5,20 @@ class CoursePanel extends Component {
   render() {
     const course = this.props.course;
 
+    function lessonRoute(lesson) {
+      return `/webdev101/course/${course.id}/l/${lesson.route}`
+    }
+
     return (
       <div className="course-panel">
         <Link to={`/webdev101/course/${course.id}/l/${course.lessons[0].route}`}>{course.title}
         </Link>
         <ul className='lesson-list'>
-          {course.lessons.map((lesson) => {
+          {course.lessons.map((lesson, idx) => {
             return(
-              <li className='lesson-list-item' key={lesson.id}>{lesson.title}</li>
+              <li className='lesson-list-item' key={idx}>
+                <Link to={lessonRoute(lesson)}>{lesson.title}</Link>
+              </li>
             )
           })}
         </ul>
