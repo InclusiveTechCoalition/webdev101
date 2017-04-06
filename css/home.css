@@ -41,10 +41,22 @@
 
 .lesson-list-item {
   list-style: none;
-  padding: 0 2vw;
+  padding: 0.3em 2vw;
   font-size: 0.8em;
+  margin: 0;
 }
 
+.lesson-list-link {
+  display: block;
+}
+
+.lesson-list-link:nth-child(odd) {
+  background-color: rgba(67,152,175, 0.08);
+}
+
+.lesson-list-item:hover {
+  background-color: rgba(67,152,175, 0.3);
+}
 
 @media only screen and (max-width: 758px) {
   .information, .course-list {

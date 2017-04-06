@@ -11,14 +11,17 @@ class CoursePanel extends Component {
 
     return (
       <div className="course-panel">
-        <Link to={`/webdev101/course/${course.id}/l/${course.lessons[0].route}`}>{course.title}
+        <Link to={`/webdev101/course/${course.id}/l/${course.lessons[0].route}`}
+              className='course-title'>{course.title}
         </Link>
         <ul className='lesson-list'>
           {course.lessons.map((lesson, idx) => {
             return(
-              <li className='lesson-list-item' key={idx}>
-                <Link to={lessonRoute(lesson)}>{lesson.title}</Link>
-              </li>
+              <Link to={lessonRoute(lesson)} className='lesson-list-link' key={idx}>
+                <li className='lesson-list-item'>
+                  {lesson.title}
+                </li>
+              </Link>
             )
           })}
         </ul>
