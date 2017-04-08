@@ -21,6 +21,31 @@ h2 {
 
 .content img {
   align-self: center;
+  max-width: 60vw;
+  height: auto;
+  box-shadow: 1px 1px 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.mini-exercise {
+  width: 100%;
+  margin: 20px 0;
+  padding: 2vw ;
+  background-color: rgba(152, 175, 67, 0.2);
+}
+
+.mini-exercise b {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.mini-exercise p {
+  line-height: 0.8em;
+}
+
+video {
+  align-self: center;
   max-width: 40vw;
   height: auto;
   box-shadow: 1px 1px 5px;
